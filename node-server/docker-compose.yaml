@@ -1,0 +1,13 @@
+version: '3.9'
+services:
+  go-server:
+    build: .
+    container_name: node-server
+    ports:
+      - 9090:3000
+    volumes:
+      - node_volume:/docker
+volumes:
+  node_volume:
+    name: afronautas
+    external: true
